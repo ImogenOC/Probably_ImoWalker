@@ -65,7 +65,7 @@ ProbablyEngine.rotation.register_custom(269, "ImoWalker", {
   { "Chi Brew", { "player.spell(Healing Elixirs).exists", "player.health <= 75", "player.chi <= 2" } },
   
   -- PvP
-  { "Disable", { "toggle.disable", "!target.debuff(Disable)" } },
+  { "Disable", "toggle.disable", "!target.debuff(Disable)"},
   
   -- Grapple Weapon Handle
   { "Grapple Weapon", { "target.class(Warrior)", "toggle.grapple" } },
@@ -152,7 +152,6 @@ ProbablyEngine.rotation.register_custom(269, "ImoWalker", {
   -- OOC End --
   -------------
   }, function()
-  ProbablyEngine.toggle.create('disable', 'Interface\\Icons\\spell_nature_rejuvenation', 'Disable', 'Toggle Disable')
-  ProbablyEngine.toggle.create('grapple', 'Interface\\Icons\\spell_nature_rejuvenation', 'Grapple Weapon', 'Toggle Grappling a Melee Opponent')
-  ProbablyEngine.toggle.create('tebpk', 'Interface\\Icons\\spell_nature_rejuvenation', 'TeB PK Sequencer', 'Integrate TeB Into the PK Sequence')
+  ProbablyEngine.toggle.create('grapple', 'Interface\\Icons\\ability_warrior_disarm', 'Grapple Weapon', 'Toggle Grappling a Melee Opponent')
+  ProbablyEngine.toggle.create('tebpk', 'Interface\\Icons\\ability_monk_tigereyebrandy', 'TeB PK Sequencer', 'Integrate TeB Into the PK Sequence')
   end)
