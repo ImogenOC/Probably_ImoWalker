@@ -114,7 +114,7 @@ ProbablyEngine.rotation.register_custom(269, "ImoWalker", {
 	{ "Blackout Kick", { "player.chi >= 2", "target.debuff(Rising Sun Kick)", "player.buff(Tiger Power)"} },
 	{ "Fists of Fury", {"player.energy < 30", "target.range <= 8"} },
 	{ "Jab" }
-},{ "target.health <= 35" }},
+  },{ "target.health <= 35" }},
   
   -- Rotation
   { "Rising Sun Kick" },
