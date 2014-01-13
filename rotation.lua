@@ -58,9 +58,9 @@ ProbablyEngine.rotation.register_custom(269, "ImoWalker", {
   -- Survival
   { "Expel Harm", "player.health < 90" },
   { "Fortifying Brew", "player.health <= 55" },
-  { "Nimble Brew", "player.state.fear" },
-  { "Nimble Brew", "player.state.stun" },
-  { "Nimble Brew", "player.state.horror" },
+  { "Nimble Brew", "player.state.fear", "toggle.nb" },
+  { "Nimble Brew", "player.state.stun", "toggle.nb" },
+  { "Nimble Brew", "player.state.horror", "toggle.nb" },
   { "Detox", { "player.dispellable(Detox)", "toggle.detox" }, "player" },
   { "Chi Brew", { "player.spell(Healing Elixirs).exists", "player.health <= 75", "player.chi <= 2" } },
   
@@ -77,10 +77,10 @@ ProbablyEngine.rotation.register_custom(269, "ImoWalker", {
   { "Grapple Weapon", { "target.class(Druid)", "toggle.grapple" } },
 
   -- Interrupts
-  { "Spear Hand Strike", "target.casting" },
-  { "Grapple Weapon", "modifier.interrupts" },
-  { "Leg Sweep", { "modifier.interrupts", "target.range <= 5" } },
-  { "Ring of Peace", { "modifier.interrupts", "target.range <= 10" } },
+  { "Spear Hand Strike", "modifier.interrupts" },
+  { "Grapple Weapon", "modifier.interrupts", "toggle.ai" },
+  { "Leg Sweep", { "modifier.interrupts", "target.range <= 5", "toggle.ai"  } },
+  { "Ring of Peace", { "modifier.interrupts", "target.range <= 10", "toggle.ai"  } },
   
   -- Cooldowns
   { "Invoke Xuen: The White Tiger", "modifier.cooldowns" },
@@ -152,6 +152,9 @@ ProbablyEngine.rotation.register_custom(269, "ImoWalker", {
   -- OOC End --
   -------------
   }, function()
+  ProbablyEngine.toggle.create('nb', 'Interface\\Icons\\spell_monk_nimblebrew', 'Nimble Brew', 'Toggles Nimble Brew Use')
+  ProbablyEngine.toggle.create('detox', 'Interface\\Icons\\spell_holy_dispelmagic', 'Detox', 'Toggles Detoxing')
+  ProbablyEngine.toggle.create('ai', 'Interface\\Icons\\ability_monk_standingkick', 'Additional Interrupts', 'Toggles Additional Interrupts')
   ProbablyEngine.toggle.create('grapple', 'Interface\\Icons\\ability_warrior_disarm', 'Grapple Weapon', 'Toggle Grappling a Melee Opponent')
   ProbablyEngine.toggle.create('tebpk', 'Interface\\Icons\\ability_monk_tigereyebrandy', 'TeB PK Sequencer', 'Integrate TeB Into the PK Sequence')
   end)
