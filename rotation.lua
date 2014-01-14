@@ -112,7 +112,7 @@ ProbablyEngine.rotation.register_custom(269, "ImoWalker", {
 	{ "Tiger Palm", "player.buff(Combo Breaker: Tiger Palm)" },
 	{ "Blackout Kick", "player.buff(Combo Breaker: Blackout Kick)" },
 	{ "Blackout Kick", { "player.chi >= 2", "target.debuff(Rising Sun Kick)", "player.buff(Tiger Power)"} },
-	{ "Fists of Fury", {"player.energy < 30", "target.range <= 8"} },
+	{ "Fists of Fury", { "player.energy < 30", "target.range <= 8"} },
 	{ "Jab" }
   },{ "target.health <= 35" }},
   
