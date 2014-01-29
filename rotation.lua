@@ -69,7 +69,7 @@ ProbablyEngine.rotation.register_custom(269, "ImoWalker", {
   
   -- Grapple Weapon Handle
   { "Grapple Weapon", { "target.class(Warrior)", "toggle.grapple" } },
-  { "Grapple Weapon", { "target.class(Paladin)", "grapple" } },
+  { "Grapple Weapon", { "target.class(Paladin)", "toggle.grapple" } },
   { "Grapple Weapon", { "target.class(Hunter)", "toggle.grapple" } },
   { "Grapple Weapon", { "target.class(DeathKnight)", "toggle.grapple" } },
   { "Grapple Weapon", { "target.class(Rogue)", "toggle.grapple" } },
